@@ -1,0 +1,35 @@
+﻿Build started 2/5/2015 9:36:21 AM.
+     1>Project "E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\usbsamp.vcxproj" on node 2 (Rebuild target(s)).
+     1>StampInf:
+         C:\Program Files\Windows Kits\8.1\bin\x86\stampinf.exe -d "*" -a "amd64" -v "*" -k "1.11" -u "1.11.0" -f .\x64\Win8.1Debug\\usbsamp.inf 
+         Stamping .\x64\Win8.1Debug\\usbsamp.inf [Version] section with DriverVer=02/05/2015,9.36.21.933
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Ix64\Win8.1Debug\ /I.. /Zi /nologo /W4 /WX /Od /Oi /Oy- /D _WIN64 /D _AMD64_ /D AMD64 /D DEPRECATE_DDK_FUNCTIONS=1 /D MSC_NOOPT /D _WIN32_WINNT=0x0603 /D WINVER=0x0603 /D WINNT=1 /D NTDDI_VERSION=0x06030000 /D DBG=1 /D KMDF_VERSION_MAJOR=1 /D KMDF_VERSION_MINOR=11 /GF /Gm- /Zp8 /GS /Gy /fp:precise /Zc:wchar_t- /Zc:forScope- /GR- /Fo"x64\Win8.1Debug\\" /Fd"x64\Win8.1Debug\vc120.pdb" /Gz /wd4748 /wd4603 /wd4627 /wd4986 /wd4987 /wd4996 /FI"C:\Program Files\Windows Kits\8.1\Include\Shared\warning.h" /errorReport:prompt /kernel -cbstring -d2epilogunwind /d1import_no_registry /d2AllowCompatibleILVersions /d2Zi+ ..\bulkrwr.c ..\device.c ..\driver.c ..\isorwr.c ..\queue.c ..\stream.c
+         bulkrwr.c
+         device.c
+         driver.c
+         isorwr.c
+         queue.c
+         stream.c
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files\Windows Kits\8.1\bin\x86\rc.exe /D _WIN64 /D _AMD64_=1 /D AMD64 /D DEPRECATE_DDK_FUNCTIONS=1 /D MSC_NOOPT /D _WIN32_WINNT=0x0603 /D WINVER=0x0603 /D WINNT=1 /D NTDDI_VERSION=0x06030000 /D DBG=1 /D "SMP_ID=\\\"{F7F12DD7-0152-469D-9D43-C60D7BED938B}\\\"" /l"0x0409" /I"C:\Program Files\Windows Kits\8.1\Include\UM" /Ix64\Win8.1Debug\ /I.. /nologo /fo"x64\Win8.1Debug\usbsamp.res" ..\usbsamp.rc 
+       Link:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"x64\Win8.1Debug\usbsamp.sys" /VERSION:"6.3" /INCREMENTAL:NO /NOLOGO /WX /SECTION:"INIT,d" "C:\Program Files\Windows Kits\8.1\lib\winV6.3\KM\x64\usbdex.lib" "C:\Program Files\Windows Kits\8.1\lib\winV6.3\KM\x64\usbd.lib" "C:\Program Files\Windows Kits\8.1\lib\winV6.3\KM\x64\ntstrsafe.lib" "C:\Program Files\Windows Kits\8.1\lib\winV6.3\KM\x64\BufferOverflowFastFailK.lib" "C:\Program Files\Windows Kits\8.1\lib\winV6.3\KM\x64\ntoskrnl.lib" "C:\Program Files\Windows Kits\8.1\lib\winV6.3\KM\x64\hal.lib" "C:\Program Files\Windows Kits\8.1\lib\winV6.3\KM\x64\wmilib.lib" "C:\Program Files\Windows Kits\8.1\lib\wdf\kmdf\x64\1.11\WdfLdr.lib" "C:\Program Files\Windows Kits\8.1\lib\wdf\kmdf\x64\1.11\WdfDriverEntry.lib" /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:"x64\Win8.1Debug\usbsamp.pdb" /SUBSYSTEM:NATIVE,"6.03" /Driver /OPT:REF /OPT:ICF /ENTRY:"FxDriverEntry" /RELEASE /IMPLIB:"x64\Win8.1Debug\usbsamp.lib" /MERGE:"_TEXT=.text;_PAGE=PAGE" /MACHINE:X64 /PROFILE /kernel /IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221,4108,4088,4218,4218,4235 /osversion:6.3 /pdbcompress /debugtype:pdata x64\Win8.1Debug\usbsamp.res
+         x64\Win8.1Debug\bulkrwr.obj
+         x64\Win8.1Debug\device.obj
+         x64\Win8.1Debug\driver.obj
+         x64\Win8.1Debug\isorwr.obj
+         x64\Win8.1Debug\queue.obj
+         x64\Win8.1Debug\stream.obj
+         usbsamp.vcxproj -> E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\x64\Win8.1Debug\usbsamp.sys
+       DriverTestSign:
+         C:\Program Files\Windows Kits\8.1\bin\x86\signtool.exe sign /ph /sha1 "4F10BF0FF430819C6B7CD2F8A83FBAB8F304C013" 
+         Done Adding Additional Store
+         Successfully signed: E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\x64\Win8.1Debug\usbsamp.sys
+         
+     1>Done Building Project "E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\usbsamp.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.00

@@ -1,0 +1,167 @@
+;/*++
+;
+;Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+;   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+;   KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+;   IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+;   PURPOSE.
+;
+;Module Name:
+;
+;    usbsamp.INF
+;
+;Abstract:
+;    Installation inf for the Intel 82930 USB Test Board, OSR USB-FX device,
+;    FX2 MUTT and FX3 MUTT device
+;
+;--*/
+
+[Version]
+Signature="$WINDOWS NT$"
+;Class=Sample
+;ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171}
+;Class=USB
+;ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+Class        = Net
+ClassGUID    = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider	 = %Realtek%
+DriverVer	 = 12/25/2014,1.0.0.0
+CatalogFile	 = usbsamp.cat
+
+;[ControlFlags]
+;ExcludeFromSelect = USB\VID_0BDA&PID_8187
+;ExcludeFromSelect = USB\VID_0BDA&PID_8189
+;ExcludeFromSelect = USB\VID_0BDA&PID_8192&MI_00
+;ExcludeFromSelect = USB\VID_0BDA&PID_8193&MI_00
+;ExcludeFromSelect = USB\VID_0BDA&PID_8193
+;ExcludeFromSelect = USB\VID_0BDA&PID_8194
+;ExcludeFromSelect = USB\VID_1668&PID_8102
+
+; ================= Class section =====================
+;A ClassInstall32 section installs a new device setup class (and possibly a class installer) for devices in the new class.
+;[ClassInstall32]
+;Addreg=UsbSampleClassReg     
+
+;[UsbSampleClassReg]
+;HKR,,,0,%ClassName%
+;HKR,,Icon,,-5
+
+;[DestinationDirs]
+;DefaultDestDir = 12
+
+[DestinationDirs]
+;usbsamp.Files.Ext = 12,System32\Drivers
+usbsamp.Files.Ext = 12
+CoInstaller_CopyFiles = 11
+; ================= Device section =====================
+
+[Manufacturer]
+;%MfgName%=Microsoft,NT$ARCH$   NTx86.6.1->Win7   NTx86.6.3->Win8
+;%RealTek%=RealTek,NTx86.6.1
+%RealTek%=RealTek,NTAMD64.6.1
+
+; For Win2K
+;[Microsoft]
+;%USB\VID_0BDA&PID_F179.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_F179	; RealTek 8188F
+
+; For XP and later
+;[Microsoft.NT$ARCH$]	NTx86.6.1->Win7   NTx86.6.3->Win8
+;[RealTek.NTx86.6.1]
+[RealTek.NTAMD64.6.1]
+;%usbsamp.DeviceDesc% = usbsamp.ndi,USB\VID_0BDA&PID_B820
+%USB\VID_0BDA&PID_F179.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_F179	; RealTek 8188F
+
+[usbsamp.ndi.NT]
+AddReg = usbsamp.nt.reg, usbsamp.common.reg
+Characteristics = 0x84
+BusType         = 15
+CopyFiles=usbsamp.Files.Ext
+
+[usbsamp.ndi.NT.Services]
+Addservice = usbsamp, 0x00000002, usbsamp.AddService,  usbsamp.EventLog
+
+;*******************************************************************************
+; Usb Sample Driver common paramters
+;*******************************************************************************
+[usbsamp.common.reg]
+HKR,Ndi\params\SSID,   	      ParamDesc,  0, %SSID_STR%
+HKR,Ndi\params\SSID,   	      type,       0, "edit"
+HKR,Ndi\params\SSID,   	      default,    0, "ANY"
+HKR,Ndi\params\SSID,   	      LimitText,  0, "32"
+
+;*******************************************************************************
+; Windows XP
+;*******************************************************************************
+[usbsamp.NT.Reg]
+HKR, Ndi\Interfaces,	UpperRange, 0, "ndis6.2"
+HKR, Ndi\Interfaces,    LowerRange, 0, "ethernet"
+;HKR, Ndi,            	Service,    0, "RTLWUSB"
+
+[usbsamp.AddService]
+DisplayName    = %usbsamp.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 2                  ; SERVICE_DEMAND_START
+;StartType      =3					; SERVICE_MANUAL_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\usbsamp.sys
+AddReg         = usbsamp.AddReg
+LoadOrderGroup = NDIS
+
+[usbsamp.EventLog]
+AddReg = usbsamp.AddEventLog.reg
+
+[usbsamp.AddEventLog.reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported  , 0x00010001, 7
+
+[usbsamp.AddReg]
+;HKR,Software\WdfUsbTestDriver,Parameters,0x10001,"0x400000"
+HKR,"Parameters","MaximumTransferSize",0x10001,"0x400000"
+;HKR,"Parameters","DebugLevel",0x10001,2
+
+[usbsamp.Files.Ext]
+usbsamp.sys
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles]
+usbsamp.sys = 1
+WdfCoInstaller01011.dll=1 ; make sure the number matches with SourceDisksNames
+
+;-------------- WDF Coinstaller installation
+;[DestinationDirs]
+;CoInstaller_CopyFiles = 11
+
+[usbsamp.ndi.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01011.dll
+
+;[SourceDisksFiles]
+;WdfCoInstaller01011.dll=1 ; make sure the number matches with SourceDisksNames
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01011.dll,WdfCoInstaller"
+
+[usbsamp.ndi.NT.Wdf]
+KmdfService = usbsamp, usbsamp_wdfsect
+
+[usbsamp_wdfsect]
+KmdfLibraryVersion = 1.11
+
+;---------------------------------------------------------------;
+
+[Strings]
+;MSFT				= "Microsoft"
+RealTek				= "RealTek"
+SSID_STR			= "SSID"
+Disk_Description	= "usbsamp Installation Disk"
+usbsamp.SvcDesc		= "WDF Test Driver for RealTek USB Interface NIC SvcDesc"
+ClassName			= "RTL Usb NIC Device"
+usbsamp.DeviceDesc.DispName		 = "WDF Test Driver for RealTek USB Interface NIC DeviceDesc"
+USB\VID_0BDA&PID_F179.DeviceDesc = "WDF USB Test Driver for RealTek 8188F"
+

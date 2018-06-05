@@ -1,0 +1,16 @@
+﻿Build started 1/15/2015 2:58:34 PM.
+     1>Project "E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\exe\usbsamp.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IWin8.1Debug\ /I..\sys /Zi /nologo /W4 /WX /Od /Oy- /D _X86_=1 /D i386=1 /D STD_CALL /D WIN32_LEAN_AND_MEAN=1 /D _WIN32_WINNT=0x0603 /D WINVER=0x0603 /D WINNT=1 /D NTDDI_VERSION=0x06030000 /D DBG=1 /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Win8.1Debug\\" /Fd"Win8.1Debug\vc120.pdb" /Gz /TC /FI"C:\Program Files\Windows Kits\8.1\Include\Shared\warning.h" /analyze- /errorReport:prompt testapp.c
+         testapp.c
+       ResourceCompile:
+         C:\Program Files\Windows Kits\8.1\bin\x86\rc.exe /D _X86_=1 /D i386=1 /D STD_CALL /D WIN32_LEAN_AND_MEAN=1 /D _WIN32_WINNT=0x0603 /D WINVER=0x0603 /D WINNT=1 /D NTDDI_VERSION=0x06030000 /D DBG=1 /D "SMP_ID=\\\"{5BA5AA6A-C09E-421C-8393-08C5DBB9D04B}\\\"" /l"0x0409" /IWin8.1Debug\ /I..\sys /nologo /fo"Win8.1Debug\testapp.res" testapp.rc 
+       Link:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Win8.1Debug\usbsamp.exe" /INCREMENTAL:NO /NOLOGO /WX kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib setupapi.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Win8.1Debug\usbsamp.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Win8.1Debug\usbsamp.lib" /MACHINE:X86 /IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221 Win8.1Debug\testapp.res
+         Win8.1Debug\testapp.obj
+         usbsamp.vcxproj -> E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\exe\Win8.1Debug\usbsamp.exe
+     1>Done Building Project "E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\exe\usbsamp.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.14

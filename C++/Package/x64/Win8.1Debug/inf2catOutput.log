@@ -1,0 +1,9 @@
+Inf2Cat Tool Output:
+.........................
+Signability test failed.
+
+Errors:
+\usbsamp.inf does not have NTAMD64 decorated model sections.
+
+Warnings:
+None

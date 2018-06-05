@@ -1,0 +1,25 @@
+﻿Build started 1/22/2017 5:28:31 PM.
+     1>Project "E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\Package\package.VcxProj" on node 2 (Rebuild target(s)).
+     1>Inf2Cat:
+         C:\Program Files\Windows Kits\8.1\bin\x86\inf2cat.exe /os:6_3_x86 /driver:E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\Win8.1Debug\package\ 
+         .........................
+         Signability test complete.
+         
+         Errors:
+         None
+         
+         Warnings:
+         None
+         
+         Catalog generation complete.
+         E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\Win8.1Debug\package\usbsamp.cat
+       DriverTestSign:
+         C:\Program Files\Windows Kits\8.1\bin\x86\signtool.exe sign /ph /sha1 "4F10BF0FF430819C6B7CD2F8A83FBAB8F304C013" 
+         Done Adding Additional Store
+         Successfully signed: E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\Win8.1Debug\package\usbsamp.cat
+         
+     1>Done Building Project "E:\devin_li\My_Test_Driver\MS_Generic_USB_Driver\C++\Package\package.VcxProj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.35
