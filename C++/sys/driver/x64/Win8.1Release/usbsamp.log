@@ -1,0 +1,19 @@
+﻿  Building 'usbsamp' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping .\x64\Win8.1Release\\usbsamp.inf [Version] section with DriverVer=06/14/2018,14.50.25.674
+E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\usbsamp.inx(83-83): warning 1252: Cannot add service 'usbsamp' with StartType=2 and ServiceType=1 (AUTO_START).
+  usbsamp.vcxproj -> E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\x64\Win8.1Release\usbsamp.sys
+  usbsamp.vcxproj -> x64\Win8.1Release\usbsamp.pdb (Full PDB)
+  ..........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\x64\Win8.1Release\usbsamp\usbsamp.cat
+  Done Adding Additional Store
+  Successfully signed: x64\Win8.1Release\usbsamp\usbsamp.cat
+  

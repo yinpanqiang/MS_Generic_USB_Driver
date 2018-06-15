@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=WindowsApplicationForDrivers10.0:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.15063.0
+Win10 Debug|x64|E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\|

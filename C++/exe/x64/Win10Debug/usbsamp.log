@@ -1,0 +1,3 @@
+﻿  Building 'usbsamp' with toolset 'WindowsApplicationForDrivers10.0' and the 'Desktop' target platform.
+  usbsamp.vcxproj -> E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\exe\x64\Win10Debug\usbsamp.exe
+  usbsamp.vcxproj -> x64\Win10Debug\usbsamp.pdb (Full PDB)

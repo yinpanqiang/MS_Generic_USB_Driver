@@ -29,7 +29,7 @@ Notes:
 
 #ifdef ALLOC_PRAGMA
 #pragma alloc_text(PAGE, GetStackCapability)
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
 #pragma alloc_text(PAGE, InitializePipeContextForSuperSpeedBulkPipe)
 #endif
 #endif
@@ -92,7 +92,7 @@ Return Value:
     return status;    
 }
 
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
                      
 NTSTATUS
 InitializePipeContextForSuperSpeedBulkPipe(

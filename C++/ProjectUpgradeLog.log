@@ -1,0 +1,22 @@
+TraceEvent:	Verbose  : 06/14/2018 14:23:13
+TraceEvent:	Verbose  : Validating specified root directories.
+TraceEvent:	Verbose  : Adding specified solutions.
+TraceEvent:	Verbose  : The solution "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\usbsamp.sln" with full path "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\usbsamp.sln" was added to the list of solutions to upgrade.
+TraceEvent:	Verbose  : Adding solutions found under the specified root directories.
+TraceEvent:	Verbose  : Adding specified projects.
+TraceEvent:	Verbose  : Adding projects found under the specified solutions.
+TraceEvent:	Verbose  : The project with full path "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\Package\package.VcxProj" was referenced by solution "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\usbsamp.sln" and added to the list of projects to upgrade.
+TraceEvent:	Verbose  : The project with full path "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\usbsamp.vcxproj" was referenced by solution "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\usbsamp.sln" and added to the list of projects to upgrade.
+TraceEvent:	Verbose  : The project with full path "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\exe\usbsamp.vcxproj" was referenced by solution "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\usbsamp.sln" and added to the list of projects to upgrade.
+TraceEvent:	Verbose  : Adding projects found under the specified root directories.
+TraceEvent:	Information  : Upgrading projects.
+TraceEvent:	Information  : Backup created at: E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\Package\package.VcxProj.backup.
+TraceEvent:	Information  : Upgrading project "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\Package\package.VcxProj".
+TraceEvent:	Information  : Upgrade complete for project "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\Package\package.VcxProj".
+TraceEvent:	Information  : Backup created at: E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\usbsamp.vcxproj.backup.
+TraceEvent:	Information  : Upgrading project "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\usbsamp.vcxproj".
+TraceEvent:	Information  : Upgrade complete for project "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\sys\driver\usbsamp.vcxproj".
+TraceEvent:	Information  : Backup created at: E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\exe\usbsamp.vcxproj.backup.
+TraceEvent:	Information  : Upgrading project "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\exe\usbsamp.vcxproj".
+TraceEvent:	Information  : Upgrade complete for project "E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\exe\usbsamp.vcxproj".
+TraceEvent:	Information  : Projects upgraded.

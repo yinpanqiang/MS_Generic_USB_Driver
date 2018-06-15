@@ -75,6 +75,7 @@ CoInstaller_CopyFiles = 11
 %USB\VID_0BDA&PID_F192.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_F192	; RealTek 8192F
 %USB\VID_0BDA&PID_818C.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_818C	; RealTek 8192F
 %USB\VID_0BDA&PID_D723.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_D723	; RealTek 8723D
+%USB\VID_0BDA&PID_B711.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_B711	; RealTek 8188G
 
 [usbsamp.ndi.NT]
 AddReg = usbsamp.nt.reg, usbsamp.common.reg
@@ -171,3 +172,4 @@ USB\VID_0BDA&PID_F179.DeviceDesc = "WDF USB Test Driver for RealTek 8188F"
 USB\VID_0BDA&PID_F192.DeviceDesc = "WDF USB Test Driver for RealTek 8192F"
 USB\VID_0BDA&PID_818C.DeviceDesc = "WDF USB Test Driver for RealTek 8192F"
 USB\VID_0BDA&PID_D723.DeviceDesc = "WDF USB Test Driver for RealTek 8723D"
+USB\VID_0BDA&PID_B711.DeviceDesc = "WDF USB Test Driver for RealTek 8188G"

@@ -1,0 +1,15 @@
+﻿  Building 'package' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  ..........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\x64\Win8.1Release\package\usbsamp.cat
+  Done Adding Additional Store
+  Successfully signed: E:\IC spec\My_Test_Driver\MS_Generic_USB_Driver\C++\x64\Win8.1Release\package\usbsamp.cat
+  

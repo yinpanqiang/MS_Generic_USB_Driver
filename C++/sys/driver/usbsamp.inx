@@ -57,7 +57,7 @@ CoInstaller_CopyFiles = 11
 ; ================= Device section =====================
 
 [Manufacturer]
-;%MfgName%=Microsoft,NT$ARCH$   NTx86.6.1->Win7   NTx86.6.3->Win8
+;%MfgName%=Microsoft,NT$ARCH$   NTx86.6.1->Win7   NTx86.6.3->Win10
 ;%RealTek%=RealTek,NTx86.6.1
 %RealTek%=RealTek,NTAMD64.6.1
 
@@ -66,12 +66,14 @@ CoInstaller_CopyFiles = 11
 ;%USB\VID_0BDA&PID_F179.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_F179	; RealTek 8188F
 
 ; For XP and later
-;[Microsoft.NT$ARCH$]	NTx86.6.1->Win7   NTx86.6.3->Win8
+;[Microsoft.NT$ARCH$]	NTx86.6.1->Win7   NTx86.6.3->Win10
 ;[RealTek.NTx86.6.1]
 [RealTek.NTAMD64.6.1]
 ;%usbsamp.DeviceDesc% = usbsamp.ndi,USB\VID_0BDA&PID_B820
 %USB\VID_0BDA&PID_F179.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_F179	; RealTek 8188F
-
+%USB\VID_0BDA&PID_F192.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_F192	; RealTek 8192F
+%USB\VID_0BDA&PID_D723.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_D723	; RealTek 8723D
+%USB\VID_0BDA&PID_818C.DeviceDesc%=usbsamp.ndi, USB\VID_0BDA&PID_818C	; RealTek 8192F
 [usbsamp.ndi.NT]
 AddReg = usbsamp.nt.reg, usbsamp.common.reg
 Characteristics = 0x84
@@ -164,4 +166,7 @@ usbsamp.SvcDesc		= "WDF Test Driver for RealTek USB Interface NIC SvcDesc"
 ClassName			= "RTL Usb NIC Device"
 usbsamp.DeviceDesc.DispName		 = "WDF Test Driver for RealTek USB Interface NIC DeviceDesc"
 USB\VID_0BDA&PID_F179.DeviceDesc = "WDF USB Test Driver for RealTek 8188F"
+USB\VID_0BDA&PID_F192.DeviceDesc = "WDF USB Test Driver for RealTek 8192F"
+USB\VID_0BDA&PID_D723.DeviceDesc = "WDF USB Test Driver for RealTek 8723D"
+USB\VID_0BDA&PID_818C.DeviceDesc = "WDF USB Test Driver for RealTek 8192F"
 

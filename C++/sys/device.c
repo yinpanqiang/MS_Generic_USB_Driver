@@ -35,7 +35,7 @@ Environment:
 #pragma alloc_text(PAGE, ReadFdoRegistryKeyValue)
 #pragma alloc_text(PAGE, RetrieveDeviceInformation)
 #pragma alloc_text(PAGE, UsbSamp_ValidateConfigurationDescriptor)
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
 #pragma alloc_text(PAGE, UsbSamp_EvtPipeContextCleanup)
 #pragma alloc_text(PAGE, InitializePipeContextForSuperSpeedDevice)
 #pragma alloc_text(PAGE, GetEndpointDescriptorForEndpointAddress)
@@ -753,7 +753,7 @@ Return Value:
 
     WDF_OBJECT_ATTRIBUTES_INIT_CONTEXT_TYPE(&pipeAttributes, PIPE_CONTEXT);
 
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
     pipeAttributes.EvtCleanupCallback = UsbSamp_EvtPipeContextCleanup;
 #endif
 
@@ -793,7 +793,7 @@ Return Value:
 
             WDF_OBJECT_ATTRIBUTES_INIT_CONTEXT_TYPE(&pipeAttributes, PIPE_CONTEXT);
 
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
             pipeAttributes.EvtCleanupCallback = UsbSamp_EvtPipeContextCleanup;
 #endif
 
@@ -825,7 +825,7 @@ Return Value:
                                                     i, //PipeIndex,
                                                     NULL
                                                     );
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
             if (pDeviceContext->IsDeviceSuperSpeed) {
                 status = InitializePipeContextForSuperSpeedDevice(pDeviceContext,
                                                                   pipe);
@@ -917,7 +917,7 @@ Return Value:
 }
 
 
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
 NTSTATUS
 InitializePipeContextForSuperSpeedDevice(
     _In_ PDEVICE_CONTEXT            DeviceContext,
@@ -1753,7 +1753,7 @@ ValidateConfigurationDescriptor_Done:
     return status;
 }
 
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
 VOID
 UsbSamp_EvtPipeContextCleanup(
     IN WDFOBJECT WdfObject

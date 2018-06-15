@@ -190,7 +190,7 @@ Return Value:
         goto Exit;
     }
 
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
     if(WdfUsbPipeTypeBulk == pipeInfo.PipeType &&
         pipeContext->StreamConfigured == TRUE) {
         //
@@ -637,7 +637,7 @@ Return Value:
         goto Exit;
     }
 
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
     //
     // If the request is for a super speed bulk pipe with streams,
     // configure its urb's PipeHandle with its associated stream's PipeHandle
@@ -811,7 +811,7 @@ Return Value:
         goto End;
     }
 
-#if (NTDDI_VERSION >= NTDDI_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN10)
     //
     // If the request is for a super speed bulk pipe with streams,
     // configure its urb's PipeHandle with its associated stream's PipeHandle
